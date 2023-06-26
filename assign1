@@ -16,7 +16,6 @@ let numberOfNFTs = 0;
 // generate a transaction ID, and store it in the variable above.
 function mintNFT(name, description, image) {
   const nft = {
-    transactionId: generateTransactionId(),
     name: name,
     description: description,
     image: image
@@ -27,16 +26,10 @@ function mintNFT(name, description, image) {
   return nft;
 }
 
-// generate a random transaction ID
-function generateTransactionId() {
-  return Math.floor(Math.random() * 1000000);
-}
-
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs(nfts) {
   for (let i = 0; i < nfts.length; i++) {
-    console.log("Transaction ID: " + nfts[i].transactionId);
     console.log("Name: " + nfts[i].name);
     console.log("Description: " + nfts[i].description);
     console.log("Image: " + nfts[i].image);
